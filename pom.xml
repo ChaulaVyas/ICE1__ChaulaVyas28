@@ -10,4 +10,17 @@
         <maven.compiler.release>21</maven.compiler.release>
         <exec.mainClass>com.mycompany.ice_1chaula.ICE_1Chaula</exec.mainClass>
     </properties>
+    <build>
+        <plugins>
+            <!-- This plugin allows running the CardTrick class -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>ca.sheridancollege.week3.softwarefundamentals.ice1.CardTrick</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
