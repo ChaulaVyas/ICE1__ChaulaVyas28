@@ -2,24 +2,24 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
 import java.util.Random;
 import java.util.Scanner;
-// final commit
+
 public class CardTrick {
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
         Random rand = new Random();
-
+//for loop
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             c.setValue(rand.nextInt(13) + 1); // 1-13
             c.setSuit(Card.SUITS[rand.nextInt(4)]); // Random suit
             magicHand[i] = c;
         }
-
+//scanner class
         Scanner input = new Scanner(System.in);
         System.out.print("Enter card value (1-13): ");
         int userValue = input.nextInt();
         input.nextLine(); // consume leftover newline
-
+//print statement
         System.out.print("Enter card suit (Hearts, Diamonds, Spades, Clubs): ");
         String userSuit = input.nextLine();
 
@@ -35,13 +35,13 @@ public class CardTrick {
                 break;
             }
         }
-
+//if loop
         if (found) {
             System.out.println("Your card is in the magic hand! 🎉");
         } else {
             System.out.println("Your card is NOT in the magic hand. ❌");
         }
-
+//print statement
         System.out.println("\nMagic Hand:");
         for (Card c : magicHand) {
             System.out.println(c.getValue() + " of " + c.getSuit());
