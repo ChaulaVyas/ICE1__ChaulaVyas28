@@ -14,14 +14,12 @@ public class CardTrick {
             c.setSuit(Card.SUITS[rand.nextInt(4)]); // Random suit
             magicHand[i] = c;
         }
-//scanner class
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter card value (1-13): ");
+
+        System.out.print("Enter card value (1-13) and suit (Hearts, Diamonds, Spades, Clubs), separated by a space: ");
         int userValue = input.nextInt();
-        input.nextLine(); // consume leftover newline
-//print statement
-        System.out.print("Enter card suit (Hearts, Diamonds, Spades, Clubs): ");
-        String userSuit = input.nextLine();
+        String userSuit = input.next();
+        input.nextLine(); // consume leftover newline if needed
 
         Card userCard = new Card();
         userCard.setValue(userValue);
