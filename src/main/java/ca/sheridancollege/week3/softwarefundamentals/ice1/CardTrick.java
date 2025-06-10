@@ -16,10 +16,15 @@ public class CardTrick {
         }
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter card value (1-13) and suit (Hearts, Diamonds, Spades, Clubs), separated by a space: ");
+
+        // Ask for card value and suit together
+        System.out.print("Enter card value (1-13): ");
         int userValue = input.nextInt();
-        String userSuit = input.next();
-        input.nextLine(); // consume leftover newline if needed
+        input.nextLine(); // consume leftover newline
+
+        System.out.print("Enter card suit (Hearts, Diamonds, Spades, Clubs): ");
+        String userSuit = input.nextLine();
+
 
         Card userCard = new Card();
         userCard.setValue(userValue);
