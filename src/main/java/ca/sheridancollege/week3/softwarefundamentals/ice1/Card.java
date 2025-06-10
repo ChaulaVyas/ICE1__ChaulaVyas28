@@ -6,7 +6,7 @@ public class Card {
    private String suit;
    private int value;
 
-   public static final String[] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
+   public static final String[] SUITS = {"Hearts", "Clubs", "Spades", "Diamonds"};
 
    public String getSuit() {
        return suit;
@@ -16,7 +16,7 @@ public class Card {
        this.suit = suit;
    }
 
-   public int getValue() {
+   public int getValue() { 
        return value;
    }
 
